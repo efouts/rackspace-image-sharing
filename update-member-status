@@ -1,0 +1,10 @@
+# $1: account_id
+# $2: token
+# $3: image_id
+# $4: status
+
+curl "https://ord.images.api.rackspacecloud.com/v2/$1/images/$3/members/$1" \
+  -i -X PUT \
+  -H "X-Auth-Token: $2" \
+  -H "Content-Type: application/openstack-images-v2.1-json-patch" \
+  -d "{ \"status\": \"$4\" }"

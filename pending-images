@@ -1,0 +1,7 @@
+# $1: account_id
+# $2: token
+
+curl "https://ord.images.api.rackspacecloud.com/v2/$1/images?visibility=shared&member_status=pending" \
+       -X get \
+       -H "X-Auth-Token: $2" \
+       -H "Content-Type: application/openstack-images-v2.1-json-patch" 
