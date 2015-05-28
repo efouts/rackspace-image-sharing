@@ -1,0 +1,11 @@
+# $1: account_id
+# $2: token
+# $3: server_id
+# $4: key
+# $5: value
+
+curl https://iad.servers.api.rackspacecloud.com/v2/$1/servers/$3/metadata/$4 \
+  -X PUT \
+  -H "X-Auth-Token: $2" \
+  -H "Content-Type: application/json" \
+  -d "{ \"meta\" : { \"$4\" : \"$5\" } }"

@@ -1,0 +1,9 @@
+# $1: account_id
+# $2: token
+# $3: server_id
+# $4: key
+
+curl https://iad.servers.api.rackspacecloud.com/v2/$1/servers/$3/metadata/$4 \
+  -X DELETE \
+  -H "X-Auth-Token: $2" \
+  -H "Content-Type: application/json"
